@@ -32,7 +32,7 @@ for c = cc
     
     [ u, U, U1 ] = degree_distribution( f, c );
     r0 = fsolve( @( x ) polyval( U1, x ) - x, 0.35, optimoptions( 'fsolve', 'Display', 'off', 'StepTolerance', 1e-15 ) );
-    gf = polyval( U1, r0 );
+    gf = polyval( U, r0 );
     t = ( c / ( ( 1 - c ) * mu01 ) );
     if c<c_g
         Ew = 1 +   mu01^2 * t / ( 1 + 2 * mu01 * t - mu02 * t ); 
